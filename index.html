@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Sign In Form</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="form-container">
+        <h2 id="formTitle">Sign Up</h2>
+
+        <!-- Sign Up Form -->
+        <form id="signUpForm" class="form">
+            <input type="text" id="signUpUsername" placeholder="Username" required>
+            <input type="email" id="signUpEmail" placeholder="Email" required>
+            <input type="password" id="signUpPassword" placeholder="Password" required>
+            <input type="password" id="signUpConfirmPassword" placeholder="Confirm Password" required>
+            
+            <div class="button-container">
+                <button type="submit">Sign Up</button>
+            </div>
+            <p class="error" id="signUpError"></p>
+        </form>
+
+        <!-- Sign In Form -->
+        <form id="signInForm" class="form hidden">
+            <input type="text" id="signInUsername" placeholder="Username" required>
+            <input type="password" id="signInPassword" placeholder="Password" required>
+            
+            <div class="button-container">
+                <button type="submit">Sign In</button>
+            </div>
+            <p class="error" id="signInError"></p>
+        </form>
+
+        <!-- Toggle Button -->
+        <div class="button-container">
+            <button class="toggle-button" id="toggleForm">Already have an account? Sign In</button>
+        </div>
+    </div>
+
+    <!-- Modal for Congratulation Popup -->
+    <div id="congratsModal" class="modal">
+        <div class="modal-content">
+            <p style="font-size:100px">&#128540;</p>
+            <h2>Congratulations!</h2>
+            <p>You have successfully signed up/signed in.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
